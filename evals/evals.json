@@ -1,0 +1,50 @@
+{
+  "skill_name": "asset-forge",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/asset-forge --plan a set of cricket stumps with bails for my cricket game, worn wood, gully street feel, for mobile",
+      "expected_output": "A rundown for a small prop: about 0.71 m tall, base-centre pivot, mobile triangle budget at or under 1500, flat low-res texture in the project style preset, no rig, no animations, 2 concept candidates then 4 views, a generation count with breakdown, the blocking warning, and an exact call list. No generation tool is called.",
+      "files": [],
+      "expectations": [
+        "Rundown states a height between 0.6 and 0.8 m",
+        "Rundown chooses base-centre pivot",
+        "Rundown sets max triangles at or below 1500",
+        "Rundown names the style preset taken from the project config or the brief and flat or preset texture mode",
+        "Rundown says rig none and lists no animations",
+        "Output includes a call list naming model3d-tripo-p2-multiview and photoroom background removal",
+        "Output includes a generation count estimate with a breakdown and the blocking warning",
+        "No Unity_AssetGeneration_GenerateAsset call was made"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "plan only: I need a stylized batsman character for my cricket game with an idle and a pull shot animation, kid proportions, teal jersey",
+      "expected_output": "Character rundown: height 1.1 to 1.4 m, feet pivot facing +Z, biped rig with Humanoid avatar, mobile character budget between 4000 and 12000 triangles, two clips: Idle from text-to-motion with TrimToBestLoop, Pull from video-to-motion with a request for a reference clip, controller from Idle, generation count, blocking warning, call list. No generation calls.",
+      "files": [],
+      "expectations": [
+        "Rundown sets height between 1.1 and 1.4 m",
+        "Rundown sets pivot at feet",
+        "Rundown sets rig to biped",
+        "Rundown lists exactly two animations, Idle and Pull",
+        "Rundown asks for a reference video for the pull shot rather than using a text prompt",
+        "Rundown mentions looping or TrimToBestLoop for Idle",
+        "Call list includes model3d-tripo-rigging-v1 and uthana-video-to-motion",
+        "No Unity_AssetGeneration_GenerateAsset call was made"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "the scoreboard you generated under Assets/Generated/scoreboard is way too shiny and about 3x too big in the scene, fix it (plan only, just tell me what you'd do)",
+      "expected_output": "Improve mode: size routed to import scale, a non-generative fix; shininess routed to the texture stage or a material smoothness fix; work planned into a v2 folder with v1 kept; no mesh regeneration proposed.",
+      "files": [],
+      "expectations": [
+        "Response identifies Improve mode or Stage 6",
+        "Size problem routed to import scale or a parent fix, not regeneration",
+        "Shininess routed to the texture stage or a material smoothness fix, not a new mesh",
+        "Response says v1 is kept and the work goes into v2",
+        "No mesh generation is proposed or made"
+      ]
+    }
+  ]
+}
