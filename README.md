@@ -2,10 +2,17 @@
 
 A Claude Code skill that turns a one-line brief into a verified, game-ready Unity asset: props, hard-surface objects, characters and their animation clips. It drives the AI generators already inside Unity 6 through the Unity MCP server, measures the result inside the editor, delivers a prefab with a report card, and improves the asset from plain-language feedback.
 
-```
+```bash
 /asset-forge a wooden market cart, low-poly, for mobile
 /asset-forge --plan a stylized knight with idle and attack animations
 ```
+
+## Related Systems Architecture & Case Study
+
+`asset-forge` was built to accelerate asset authoring and rapid prototyping for intelligent gameplay ecosystems:
+
+- **Interactive AI Lab & Case Study**: [Unity 6 AI NPC Behavior System Architecture](https://www.eshannaithani.com/labs/ai-npc-system/architecture?utm_source=github&utm_medium=repo&utm_campaign=asset_forge) — Inspect an autonomous tactical guard AI with vision, hearing, and NavMesh dynamic pathfinding.
+- **Engineering Services**: [AI Gameplay Systems & Unity Development](https://www.eshannaithani.com/services/ai-gameplay-systems?utm_source=github&utm_medium=repo&utm_campaign=asset_forge) — Custom AI state machines, procedural systems, and gameplay engineering.
 
 ## What it does
 
